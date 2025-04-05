@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Dummy Website with Chatbot</title>
+  <title>My Dummy Website</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <header>
-    <h1>Welcome to My Website</h1>
-    <p>This is a sample page to test the chatbot integration.</p>
+    <h1>Welcome to My Dummy Website</h1>
+    <p>This is a sample page to test my chatbot integration.</p>
   </header>
 
   <main>
@@ -19,28 +19,16 @@
     </section>
   </main>
 
-  <!-- Add the Bot Framework Web Chat script -->
-  <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
-
-  <div id="bot-container" style="height: 400px; width: 300px;"></div>
-
-  <script>
-    window.WebChat.renderWebChat(
-      {
-        directLine: window.WebChat.createDirectLine({
-          secret: 'YOUR_DIRECT_LINE_SECRET',  // Replace with your Direct Line secret from Azure
-          // If using your own server with ngrok, use the following:
-          url: 'https://0f48-156-208-37-13.ngrok-free.app/api/messages',  // Replace with your ngrok URL and your bot's endpoint
-          webSocket: false, // Use WebSockets if supported by your bot server
-        })
-      },
-      document.getElementById('bot-container')
-    );
-  </script>
-
-  <footer>
-    <p>Chatbot integration example.</p>
-  </footer>
+  <!-- Chatbot iframe -->
+  <div id="chatbot-container" style="position: fixed; bottom: 20px; right: 20px;">
+    <iframe
+      src="https://0f48-156-208-37-13.ngrok-free.app/api/messages"  <!-- Replace with your bot's URL -->
+      width="350"
+      height="500"
+      frameborder="0"
+      style="border-radius: 10px;"
+    ></iframe>
+  </div>
 
 </body>
 </html>
