@@ -28,11 +28,10 @@
     window.WebChat.renderWebChat(
       {
         directLine: window.WebChat.createDirectLine({
-          // secret: 'YOUR_DIRECT_LINE_SECRET',  // If using Azure, replace with your Direct Line secret
-          // If your bot is hosted on your own server, set the DirectLine URL to the bot's endpoint
-          // For example:
-          url: 'https://0f48-156-208-37-13.ngrok-free.app', 
-          webSocket: false, // You can set this to true if your bot supports WebSockets
+          secret: 'YOUR_DIRECT_LINE_SECRET',  // Replace with your Direct Line secret from Azure
+          // If using your own server with ngrok, use the following:
+          url: 'https://0f48-156-208-37-13.ngrok-free.app/api/messages',  // Replace with your ngrok URL and your bot's endpoint
+          webSocket: false, // Use WebSockets if supported by your bot server
         })
       },
       document.getElementById('bot-container')
