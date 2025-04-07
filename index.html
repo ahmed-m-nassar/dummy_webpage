@@ -1,12 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Chatbot Integration</title>
-  <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
-</head>
-<body>
-<iframe src='https://webchat.botframework.com/embed/test_April?s=AnKdqC9wtwCIPjkzN0wuQ9ocYLDHKlB8EzAqDrYiZmzDP3gyLHzdJQQJ99BDAC4f1cMAArohAAABAZBS1PSO.AQuzcH4Y2QbY5A0wfp5DH44tiBvrfq1nCemfMwgqzaODtrIhkv54JQQJ99BDAC4f1cMAArohAAABAZBS1WVJ'  style='min-width: 400px; width: 100%; min-height: 500px;'></iframe>
-</body>
+<html>
+  <head>
+    <title>Bot Chat</title>
+    <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+  </head>
+  <body>
+    <div id="webchat" role="main"></div>
+    <script>
+      const styleOptions = {
+        botAvatarInitials: 'Bot',
+        userAvatarInitials: 'You'
+      };
+
+      window.WebChat.renderWebChat({
+        directLine: window.WebChat.createDirectLine({
+          secret: 'CIGhOwiqVJ0TWoc0sMDpnLVUFWdCc3rxWH4FU367kxs657EVKn3vJQQJ99BDAC4f1cMAArohAAABAZBS34Z9.At141aFCnbeAHCjrfhpN0ncQlYkwyChHervmgLurMPzHnshyk0EbJQQJ99BDAC4f1cMAArohAAABAZBS2NxZ'
+        }),
+        styleOptions: styleOptions
+      }, document.getElementById('webchat'));
+    </script>
+  </body>
 </html>
