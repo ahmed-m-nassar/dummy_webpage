@@ -7,23 +7,6 @@
   <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
 </head>
 <body>
-  <h1>Chat with our Bot</h1>
-  <div id="chatbot-container" style="position: fixed; bottom: 20px; right: 20px; width: 350px; height: 500px;">
-    <div id="webchat"></div>
-  </div>
-
-  <script>
-    const directLine = window.WebChat.createDirectLine({
-      secret: 'CIGhOwiqVJ0TWoc0sMDpnLVUFWdCc3rxWH4FU367kxs657EVKn3vJQQJ99BDAC4f1cMAArohAAABAZBS34Z9.At141aFCnbeAHCjrfhpN0ncQlYkwyChHervmgLurMPzHnshyk0EbJQQJ99BDAC4f1cMAArohAAABAZBS2NxZ', // Replace with your Direct Line Secret
-      webSocket: false, // You can set to true for WebSocket connection
-    });
-
-    window.WebChat.renderWebChat({
-      directLine: directLine,
-      userID: 'user1',  // Optionally provide userID
-      username: 'User', // Optionally provide user name
-      locale: 'en-US', // Optionally provide locale
-    }, document.getElementById('webchat'));
-  </script>
+<iframe src='https://webchat.botframework.com/embed/test_April?s=AnKdqC9wtwCIPjkzN0wuQ9ocYLDHKlB8EzAqDrYiZmzDP3gyLHzdJQQJ99BDAC4f1cMAArohAAABAZBS1PSO.AQuzcH4Y2QbY5A0wfp5DH44tiBvrfq1nCemfMwgqzaODtrIhkv54JQQJ99BDAC4f1cMAArohAAABAZBS1WVJ'  style='min-width: 400px; width: 100%; min-height: 500px;'></iframe>
 </body>
 </html>
