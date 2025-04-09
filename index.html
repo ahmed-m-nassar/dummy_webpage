@@ -5,19 +5,7 @@
     <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
   </head>
   <body>
-    <div id="webchat" role="main"></div>
-    <script>
-      const styleOptions = {
-        botAvatarInitials: 'Bot',
-        userAvatarInitials: 'You'
-      };
-
-      window.WebChat.renderWebChat({
-        directLine: window.WebChat.createDirectLine({
-          secret: 'CIGhOwiqVJ0TWoc0sMDpnLVUFWdCc3rxWH4FU367kxs657EVKn3vJQQJ99BDAC4f1cMAArohAAABAZBS34Z9.At141aFCnbeAHCjrfhpN0ncQlYkwyChHervmgLurMPzHnshyk0EbJQQJ99BDAC4f1cMAArohAAABAZBS2NxZ'
-        }),
-        styleOptions: styleOptions
-      }, document.getElementById('webchat'));
-    </script>
+    <div id="rasa-chat-widget" data-websocket-url="https://nkhp9qtv-5005.uks1.devtunnels.ms/"></div>
+<script src="https://unpkg.com/@rasahq/rasa-chat" type="application/javascript"></script>
   </body>
 </html>
