@@ -4,15 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Botpress Chat Widget</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <script src="https://4541-34-70-131-6.ngrok-free.app/assets/modules/channel-web/inject.js"></script>
-    <script>
+  <!-- Load Botpress Inject Script Dynamically & Wait for It -->
+  <script>
+    const script = document.createElement('script');
+    script.src = "https://4541-34-70-131-6.ngrok-free.app/assets/modules/channel-web/inject.js";
+    script.onload = () => {
+      // Wait until script has loaded, then init
       window.botpressWebChat.init({
-        host: "https://4541-34-70-131-6.ngrok-free.app",
+        host: "https://4541-34-70-131-6.ngrok-free.app/",
         botId: "demo_bot3"
-      })
-    </script>
+      });
+    };
+    document.head.appendChild(script);
+  </script>
+
 </body>
 </html>
