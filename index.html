@@ -9,17 +9,22 @@
 
   <!-- Load Botpress Inject Script Dynamically & Wait for It -->
   <script>
-    const script = document.createElement('script');
-    script.src = "https://4541-34-70-131-6.ngrok-free.app/assets/modules/channel-web/inject.js";
-    script.onload = () => {
-      // Wait until script has loaded, then init
-      window.botpressWebChat.init({
-        host: "https://4541-34-70-131-6.ngrok-free.app/",
-        botId: "demo_bot3"
-      });
-    };
-    document.head.appendChild(script);
-  </script>
+  (function(d,t) {
+    var BASE_URL="https://chatwoot.genomind.net";
+    var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=BASE_URL+"/packs/js/sdk.js";
+    g.defer = true;
+    g.async = true;
+    s.parentNode.insertBefore(g,s);
+    g.onload=function(){
+      window.chatwootSDK.run({
+        websiteToken: 'LqQ8a47VXYBVQZ7gU18K6EdD',
+        baseUrl: BASE_URL
+      })
+    }
+  })(document,"script");
+</script>
+
 
 </body>
 </html>
